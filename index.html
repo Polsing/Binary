@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" href="starbit.png">
+    <title>base number system</title>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <i class="bi bi-star-fill"></i>
+            <b>STARBIT</b>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="content">
+        <div class="text">
+          <h1>ระบบเลข</h1>
+          <br>
+          <p><b>ระบบเลข</b> เป็นสัญลักษณ์ทางคณิตศาสตร์ที่แสดงถึงจำนวนต่าง ๆ ระบบเลขแต่ละระบบมีจำนวนตัวเลขที่ใช้เหมือนกับชื่อของระบบตัวเลขนั้น และมีฐานของจำนวนเลขตามชื่อของมัน เช่น เลขฐานสอง เลขฐานแปด เลขฐานสิบ เลขฐานสิบหก</p>
+          <br>
+          <p><b>ระบบเลขฐานสอง</b> เป็นเลขฐานที่ประกอบด้วยตัวเลข 2 ตัว คือ 0 และ 1 ซึ่งเลข 0 กับ 1 เป็นเลขที่นิยมใช้กับคอมพิวเตอร์ในการประมวลผลการทำงาน การเก็บข้อมูล หรือโปรแกรมที่เกี่ยวข้องกับสถานะทางไฟฟ้า</p>
+          <p>ระบบเลขที่มีสัญลักษณ์เพียงสองตัวคือ 0 กับ 1 บางครั้งอาจหมายถึงการที่มีโอกาสเลือกได้เพียง 2 ทาง เช่น ปิดกับเปิด, ไม่ใช่กับใช่, เท็จกับจริง, ซ้ายกับขวา เป็นต้น</p>
+          <p>ในปัจจุบันเลขฐานสองเป็นพื้นฐานในการทำงานของคอมพิวเตอร์ โดยนำเอาหลักการของเลขฐานสอง (สถานะไม่มีไฟฟ้า และ สถานะมีไฟฟ้า) มาใช้ในการสร้างไมโครโปรเซสเซอร์ที่มีหน่วยประมวลผลแบบ 32 หรือ 64 บิต หรือมากกว่านั้น ซึ่งสามารถเรียกได้ว่าเป็นการประมวลผลแบบดิจิทัล</p>
+          <br>
+          <p><b>เลขฐานแปด</b> หรือ อัฐนิยม (อังกฤษ: Octal) หมายถึง ระบบตัวเลขที่มีตัวเลขแปดตัว คือ 0 - 7 เลขฐานแปดนี้สร้างขึ้นจากเลขฐานสอง โดยการจัดกลุ่มเลขฐานสองออกเป็นกลุ่มละสามตัว (เริ่มจากขวา) ตัวอย่างเช่น เลขฐานสองที่แทนเลข 74 ในฐานสิบ คือ 1001010 เมื่อจัดเป็นกลุ่มละสาม จากขวาไปซ้าย ก็จะได้ 1 001 010 — เลขฐานแปดก็คือ 112 (1 ฐานสองตัวแรก เท่ากับ 1 ฐานแปด, 001 ฐานสอง เท่ากับ 1 ฐานแปด และ 010 ฐานสอง เท่ากับ 2 ฐานแปด)</p>
+          <p>บางครั้งมีการใช้เลขฐานแปด ในการคำนวณและการเขียนโปรแกรมคอมพิวเตอร์แทนที่การใช้เลขฐานสิบหก</p>
+          <br>
+          <p><b>ระบบเลขฐานสิบ</b> เป็นเลขฐานที่ประกอบด้วยเลข 10 ตัว คือ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ซึ่งเลขฐาน 10 เป็นเลขฐานที่มนุษย์ทั่วไปสามารถเข้าใจได้ง่ายมากที่สุด เพราะว่าเป็นตัวเลขที่เกี่ยวข้องกับชีวิตประจำวัน</p>
+          <br>
+          <p><b>ระบบเลขฐานสิบหก</b> เป็นเลขฐานที่ประกอบด้วยเลข 10 ตัวและตัวอักษร 6 ตัว คือตัวเลข 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, และตัวอักษรคือ A แทน 10, B แทน 11, C แทน 12, D แทน 13, E แทน 14, F แทน 15 ซึ่งรวมกันแล้วได้ 16 ตัว</p>
+          <p>ระบบเลขฐานสิบหก (hexadecimal) มักถูกใช้ในการเข้ารหัส (encode) คำสั่งควบคุมเครื่อง (control code) ที่อยู่ในระบบเลขฐานสอง (binary) ที่มีจำนวนคำสั่งยาวมาก ๆ ยกตัวอย่างได้ เช่น ตามคำอธิบายข้างต้น ถ้า 11111 เป็นคำสั่งควบคุมเครื่องในรูปเลขฐานสอง (binary) คือ 11111 ผู้ควบคุมเครื่องอาจจะเข้ารหัส (encode) คำสั่งควบคุมเครื่องไว้ในรหัสบาร์โค้ด (barcode) ในรูป 1F ถ้าใช้รหัสเลขฐานสิบหก (hexadecimal) ซึ่งบาร์โค้ด (barcode) นั้นเวลาพิมพ์ที่จะใช้ให้เครื่องอ่านคำสั่งควบคุมเครื่อง จะใช้ความยาวของบาร์โค้ด (barcode) 2 ตัว เช่นการใช้ระบบเลขฐานสิบหก (hexadecimal) นี้ในการเข้ารหัส (encode) คำสั่งควบคุมเครื่อง (control code)สำหรับเครื่องจักรอัตโนมัติความเร็วสูง ( high speed Finishing system) เป็นต้น</p>
+          <br>
+          <a href="https://th.wikipedia.org/wiki/%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B9%80%E0%B8%A5%E0%B8%82#:~:text=%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B9%80%E0%B8%A5%E0%B8%82%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%AD%E0%B8%87%20%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99,6%2C%207%2C%20%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B9%81%E0%B8%9B%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B8%A7">
+            อ้างอิงจากวิกิพีเดีย wikipedia.org</a>
+        </div>
+        
+        <div class="select">
+            <select class="form-select" id="select1" oninput="checkSlect()">
+                <option selected disabled>Choose...</option>
+                <option value="1">เลขฐานสอง binary</option>
+                <option value="2">เลขฐานแปด octal</option>
+                <option value="3">เลขฐานสิบ decimal</option>
+                <option value="4">เลขฐานสิบหก hexadecimal</option>
+              </select>
+              <h3 class="font-monospace ">TO</h3>
+              <select class="form-select" id="select2" oninput="checkSlect()">
+                <option selected disabled>Choose...</option>
+                <option value="1">เลขฐานสอง binary</option>
+                <option value="2">เลขฐานแปด octal</option>
+                <option value="3">เลขฐานสิบ decimal</option>
+                <option value="4">เลขฐานสิบหก hexadecimal</option>
+              </select>
+        </div>
+        
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="value" id="value" oninput="toggleresult('value','result')">
+            <div class="float-start form-control" id="result">result</div>
+        </div> 
+    </div>
+    <br>
+    <footer>
+        <div class="date">
+            <i class="bi bi-star-fill"></i>
+            <b>STARBIT</b>  
+        </div>  
+            <b>@bata v 1.0 2024</b>
+        <div class="date">
+            <i class="bi bi-calendar3-week-fill"></i>
+            <b id="time"></b>
+        </div>
+                
+           
+    </footer>
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
